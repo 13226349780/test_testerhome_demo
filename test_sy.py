@@ -8,18 +8,18 @@ url = 'https://testerhome.com/'
 
 class test_testerhome_sy(unittest.TestCase):
     def setUp(self):
-        driver = webdriver.Chrome()
-        driver.get(url)
-
-    def test_opensy(self):
-        sleep(3)
-        #driver = webdriver.Chrome()
-        #driver.get(url)
-    def test_click_gg(self):
-        pass
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get(url)
     def tearDown(self):
         print('测试完成现在退出')
-        quit()
+        self.driver.quit()
+    def test_opensy(self):
+        sleep(3)
+    def test_click_gg(self):
+        self.driver.find_element_by_xpath("/html/body[@class='page-home']/div[@id='main']/div[@class='panel panel-default']/a/img/@src").click()
+
+
 
 
 
