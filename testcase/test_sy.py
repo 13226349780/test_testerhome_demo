@@ -1,19 +1,15 @@
 import unittest
-from imp import reload
 from time import sleep
-
-
-
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+import yaml
 
-
-
-url = 'https://testerhome.com/'
 
 
 class test_testerhome_sy(unittest.TestCase):
     def setUp(self):
+        stream = open('../ymal/url.ymal')
+        data = yaml.load(stream)
+        url = data['url']
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get(url)
