@@ -1,8 +1,13 @@
 import unittest
+from imp import reload
 from time import sleep
+
+
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
+
 
 url = 'https://testerhome.com/'
 
@@ -35,8 +40,8 @@ class test_testerhome_sy(unittest.TestCase):
     def test_3click_Stick(self):
         #点击其中一个帖子
 
-        Stick_all=self.driver.find_element_by_class_name('panel-body topics row')
-
+       # Stick_all=self.driver.find_element_by_class_name('panel-body topics row')
+        pass
 
 
 
