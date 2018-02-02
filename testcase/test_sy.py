@@ -7,7 +7,7 @@ url = 'https://testerhome.com/'
 
 class test_testerhome_sy(unittest.TestCase):
     def setUp(self):
-
+        
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get(url)
