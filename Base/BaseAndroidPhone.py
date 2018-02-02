@@ -63,4 +63,4 @@ def get_app_pix(devices):
     return result.readline().split("Physical size:")[1]
 
 if __name__=="__main__":
-    getPhoneInfo("DU2TAN15AJ049163")
+    getPhoneInfo("956b23ec")
